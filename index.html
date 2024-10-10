@@ -6,35 +6,24 @@
     <title>Pappet_Master</title>
     <link rel="stylesheet" href="./css/firstpage.css" />
     <link rel="stylesheet" href="/css/secondpage.css" />
+    <link rel="stylesheet" href="./css/thirdpage.css" />
   </head>
   <body>
-    <!-- <header>
-      <div class="logo">
-        <img src="./images/marketing_materials_transparent_logo.png" alt="Puppet_Master logo" />
-      </div>
-    </header> -->
     <div class="container">
       <section class="firstpage">
         <div class="Puppet_Master_background">
-          <a href="#secondpage">Click me!</a>
-        </div>
+            <a href="#secondpage">Click me!</a>
       </section>
       <section id="secondpage">
-        <div>
-          <h2>Videos</h2>
+        <button id="playPauseButton">Pause</button>
+        <div class="Puppet_Master_video flex">
+          <video id="myVideo" src="./videos/Puppet Master video 1.mp4" width="400" height="300" autoplay loop muted></video>
         </div>
-        <div style="overflow: hidden">
-          <div class="Puppet_Master_video flex">
-            <video src="./videos/Puppet Master video 1.mp4" controls width="400" height="300"></video>
-            <video src="./videos/Puppet Master video 2.mp4" controls width="400" height="300"></video>
-            <video src="./videos/Puppet Master video 3.mp4" controls width="400" height="300"></video>
-          </div>
+        <div class="tv_gift">
+          <img src="./images/background/TV_for_gifs.png" alt="" />
         </div>
       </section>
-      <div class="video_button">
-        <button class="prev"><</button>
-        <button class="next">></button>
-      </div>
+      <section id="thirdpage"></section>
     </div>
     <script src="./js/app.js"></script>
   </body>

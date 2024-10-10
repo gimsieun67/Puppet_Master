@@ -38,6 +38,12 @@ header {
   height: 881px;
   background-image: url("../images/background/Puppet\ Master_Pitch_3.png");
   background-size: contain;
+  animation: scale_background 0.8s infinite;
+}
+@keyframes scale_background {
+  50% {
+    transform: scale(1.01);
+  }
 }
 .Puppet_Master_background > a {
   width: 160px;
@@ -52,7 +58,16 @@ header {
   font-size: 30px;
   border: solid 3px white;
   transition: 0.3s;
+  animation: moveClick 1s infinite;
 }
 .Puppet_Master_background > a:hover {
   background-color: #3c3d37;
+}
+@keyframes moveClick {
+  20% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-7deg);
+  }
 }
