@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li,
+ul {
+  list-style: none;
+}
+.flex {
+  display: flex;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo > img {
+  width: 200px;
+  height: 100px;
+}
+.container > .pagesize {
+  width: 100%;
+  height: 700px;
+}
+/* firstpage */
+.Puppet_Master_background {
+  width: 100%;
+  height: 881px;
+  background-image: url("../images/background/Puppet\ Master_Pitch_3.png");
+  background-size: contain;
+}
+.Puppet_Master_background > a {
+  width: 160px;
+  height: 60px;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  color: white;
+  font-weight: 900;
+  left: 89%;
+  top: 91%;
+  font-size: 30px;
+  border: solid 3px white;
+  transition: 0.3s;
+}
+.Puppet_Master_background > a:hover {
+  background-color: #3c3d37;
+}
