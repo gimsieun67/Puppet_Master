@@ -35,16 +35,17 @@ header {
 /* firstpage */
 .Puppet_Master_background {
   width: 100%;
-  height: 881px;
+  height: 100vh;
   background-image: url("../images/background/Puppet\ Master_Pitch_3.png");
-  background-size: contain;
-  animation: scale_background 0.8s infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
-@keyframes scale_background {
+/* @keyframes scale_background {
   50% {
     transform: scale(1.01);
   }
-}
+} */
 .Puppet_Master_background > a {
   width: 160px;
   height: 60px;
@@ -54,20 +55,20 @@ header {
   color: white;
   font-weight: 900;
   left: 89%;
-  top: 91%;
+  top: 88%;
   font-size: 30px;
   border: solid 3px white;
   transition: 0.3s;
-  animation: moveClick 1s infinite;
+  animation: moveClick 3s infinite;
 }
 .Puppet_Master_background > a:hover {
   background-color: #3c3d37;
 }
 @keyframes moveClick {
   20% {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
   }
-  60% {
-    transform: rotate(-7deg);
+  30% {
+    transform: rotate(-2deg);
   }
 }
