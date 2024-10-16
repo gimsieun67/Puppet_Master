@@ -2,28 +2,35 @@
   width: 100%;
   height: 910px;
   background-image: url("../images/background/navy.png");
-  z-index: -1;
+  z-index: -2;
   display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
-.click_bubble {
+.click_bubble,
+.click_empty_bubble {
   width: 100px;
-  height: 200px;
-  line-height: 150px;
+  height: 900px;
+  line-height: 100px;
   position: absolute;
+  z-index: 1;
+  padding-top: 45px;
 }
 .click_bubble > img {
   width: 100px;
 }
+.click_bubble {
+  z-index: 1;
+}
 .click_empty_bubble {
-  width: 100px;
-  height: 200px;
-  line-height: 150px;
-  position: absolute;
+  z-index: 0;
 }
 .click_empty_bubble > img {
   width: 100px;
 }
 .bubbles {
+  height: 500px;
   margin-left: 50px;
 }
 .thirdpage_imgs {
@@ -35,14 +42,14 @@
   position: absolute;
   z-index: 1; /* 필요에 따라 z-index 조정 */
   border-radius: 50%;
-  top: 10%;
-  border-left: 5px solid yellow;
-  border-right: 5px solid yellow;
+  top: 20%;
+  border-left: 15px solid #faf8f1;
+  border-right: 15px solid black;
+  opacity: 0;
 }
 .click_img {
   width: 900px;
   height: 500px;
   justify-content: space-around;
-  margin-top: 55px;
   gap: 40%;
 }

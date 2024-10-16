@@ -9,10 +9,13 @@
   position: relative;
   text-align: center;
   background-image: url("../images/background/Puppet\ Master_Pitch_11.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 .Puppet_Master_video {
   position: absolute;
-  left: 230px;
+  left: 112px;
   top: 12%;
 }
 .tv_gift > img {
