@@ -122,3 +122,61 @@ heart6.addEventListener("click", () => {
   screenshot5.style.opacity = "0";
   screenshot6.style.opacity = "1";
 });
+
+const social = document.querySelector(".social");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+let currentIndex = 1;
+const imgWidth = 530; // 이미지 너비
+const totalImages = document.querySelectorAll(".social img").length;
+
+// 처음과 마지막 이미지 복사해서 무한 슬라이드 구현
+const firstImage = social.children[0].cloneNode(true);
+const lastImage = social.children[social.children.length - 1].cloneNode(true);
+social.appendChild(firstImage);
+social.insertBefore(lastImage, social.children[0]);
+
+// 초기 위치 설정 (두 번째 이미지에서 시작)
+social.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
+
+// 슬라이드 업데이트 함수
+function updateSliderPosition() {
+  social.style.transition = "transform 0.5s ease";
+  social.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
+}
+
+// 다음 이미지로 이동
+nextButton.addEventListener("click", () => {
+  currentIndex++;
+  updateSliderPosition();
+
+  // 마지막 이미지를 넘으면 첫 번째 이미지로
+  if (currentIndex === totalImages) {
+    setTimeout(() => {
+      social.style.transition = "none";
+      currentIndex = 1;
+      social.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
+    }, 500);
+  }
+});
+
+// 이전 이미지로 이동
+prevButton.addEventListener("click", () => {
+  currentIndex--;
+  updateSliderPosition();
+
+  // 첫 번째 이미지를 넘으면 마지막 이미지로
+  if (currentIndex === 0) {
+    setTimeout(() => {
+      social.style.transition = "none";
+      currentIndex = totalImages - 1;
+      social.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
+    }, 500);
+  }
+});
+
+// 자동 슬라이드
+// setInterval(() => {
+//   nextButton.click();
+// }, 3000); //
