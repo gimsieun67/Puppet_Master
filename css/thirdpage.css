@@ -1,8 +1,12 @@
+@font-face {
+  src: url("../font/DEVOTTE.otf");
+  font-family: "sieun";
+}
+
 #thirdpage {
   width: 100%;
-  height: 910px;
+  height: 950px;
   background-image: url("../images/background/navy.png");
-  z-index: -2;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,26 +23,32 @@
 }
 
 .thirdpage_imgs {
-  width: 900px;
-  height: 700px;
+  width: 950px;
+  height: 570px;
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: 4%;
+  left: 44%;
   transform: translateX(-50%);
   z-index: 2; /* 이미지가 bubbles 위에 오도록 설정 */
 }
-
+.note > ul {
+  padding-top: 20px;
+}
 .thirdpage_imgs > img {
-  width: 1200px;
+  width: 1000px;
   height: 800px;
   position: absolute;
-  right: -165px;
-  top: -60px;
+  right: -10%;
+  top: -9%;
+  object-fit: cover;
 }
 .bubbles {
   position: relative;
-  bottom: 120px;
-  right: 46%;
+  bottom: 110px;
+  right: 44%;
+}
+.hearts {
+  margin-top: 90px;
 }
 .click_bubble,
 .click_empty_bubble {
@@ -51,20 +61,41 @@
   height: 90px;
 }
 .click_bubble {
-  z-index: 2;
+  z-index: 5;
 }
 .Puppet_Master_imgnote > ul {
   width: 800px;
   position: absolute;
   right: -200px;
-  bottom: -30px;
-  line-height: 50px;
+  bottom: -10px;
   font-size: 20px;
   color: white;
+  font-family: "sieun";
 }
+
+.screenshot2,
+.screenshot3,
+.screenshot4,
+.screenshot5 {
+  opacity: 0;
+}
+.note1 > li > h2,
+.note2 > li > h2,
+.note3 > li > h2,
+.note4 > li > h2,
+.note5 > li > h2 {
+  font-size: 40px;
+}
+
 .note2,
 .note3,
 .note4,
 .note5 {
   opacity: 0;
+}
+.heart_01 {
+  opacity: 0;
+}
+.note > ul > li {
+  width: 1050px;
 }

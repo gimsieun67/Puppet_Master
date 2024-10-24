@@ -1,31 +1,44 @@
 .fourpage {
   width: 100%;
-  height: 700px;
-  background-image: url("../images/background/marketing_materials_1.png");
+  height: 800px;
+  background-image: url("../images/background/navy.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.octopus {
+  width: 900px;
+  height: 700px;
+  background-image: url("../images/background/octopuss.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .slider {
   position: relative;
-  width: 530px;
-  height: 300px;
-  overflow: hidden;
+  width: 1000px; /* 슬라이더의 고정 너비 */
+  height: 500px;
   margin: 0 auto;
-  top: 25%;
-  left: 30px;
+  overflow: hidden; /* 슬라이더에서 넘치는 이미지는 숨김 */
+  top: 8%;
 }
 
 .social {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: calc(530px * 6); /* 이미지 개수에 맞춰서 조정 */
+  display: flex; /* 가로로 이미지 나열 */
+  transition: transform 0.5s ease; /* 부드러운 슬라이드 효과 */
+  width: calc(1000px * 5); /* 이미지 개수에 맞춰서 조정 */
 }
 
 .social > img {
-  width: 530px;
-  height: 300px;
+  width: 1000px; /* 각 이미지의 고정 너비 */
+  height: 500px;
+  flex-shrink: 0; /* 이미지 크기를 유지 */
 }
 
 button {
@@ -37,40 +50,50 @@ button {
   border: none;
   padding: 10px;
   cursor: pointer;
+  z-index: 1;
+}
+
+.prev,
+.next {
+  font-size: 18px;
 }
 
 .prev {
-  left: 0;
+  left: 10px;
 }
 
 .next {
-  right: 0;
+  right: 10px;
 }
 
 .sns {
-  padding-top: 50px;
+  padding-top: 12%;
   align-items: center;
-  gap: 43px;
-  position: absolute;
-  left: 33.4%;
-  bottom: -280%;
+  text-align: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
 }
+
 .sns > a > img {
   width: 40px;
   height: 40px;
 }
+
 .sns > a {
   width: 70px;
   height: 70px;
   text-align: center;
   line-height: 90px;
   border: 5px solid black;
+  background-color: antiquewhite;
   border-radius: 50%;
   transition: 0.3s;
 }
+
 .sns > a:hover {
-  background-color: antiquewhite;
+  border: solid 5px white;
 }
+
 .Puppet_Master_comment {
   width: 370px;
   height: 260px;
@@ -79,11 +102,13 @@ button {
   position: relative;
   bottom: 43%;
 }
+
 .Puppet_Master_comment > li {
   font-size: 20px;
   font-weight: 700;
   color: #54473f;
 }
+
 .Puppet_Master_comment > li:nth-child(1) {
   color: #4a4947;
 }
