@@ -99,3 +99,9 @@
 .note > ul > li {
   width: 1050px;
 }
+.click_heart {
+  width: 100px;
+  position: relative;
+  left: 550%;
+  bottom: 90px;
+}

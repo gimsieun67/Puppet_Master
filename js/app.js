@@ -1,14 +1,12 @@
-const video = document.getElementById("myVideo");
-const button = document.getElementById("playPauseButton");
-
-button.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    button.textContent = "∎";
-  } else {
-    video.pause();
-    button.textContent = "▶️";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("#myVideo");
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
 });
 
 const love1 = document.querySelector(".heart_01");
