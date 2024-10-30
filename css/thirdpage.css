@@ -24,22 +24,28 @@
 
 .thirdpage_imgs {
   width: 950px;
-  height: 570px;
+  height: 70px;
   position: absolute;
   top: 4%;
   left: 44%;
   transform: translateX(-50%);
   z-index: 2; /* 이미지가 bubbles 위에 오도록 설정 */
 }
+.note {
+  margin-right: 90px;
+}
 .note > ul {
+  font-size: 20px;
   padding-top: 20px;
+}
+.note > li {
+  font-size: 30px;
 }
 .thirdpage_imgs > img {
   width: 1000px;
-  height: 800px;
+  height: 500px;
   position: absolute;
-  right: -10%;
-  top: -9%;
+  bottom: -740%;
   object-fit: cover;
 }
 .bubbles {
@@ -48,7 +54,8 @@
   right: 44%;
 }
 .hearts {
-  margin-top: 90px;
+  margin-left: 100px;
+  margin-bottom: 30px;
 }
 .click_bubble,
 .click_empty_bubble {
@@ -57,8 +64,8 @@
 }
 .click_bubble > img,
 .click_empty_bubble > img {
-  width: 100px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 .click_bubble {
   z-index: 5;
@@ -66,9 +73,8 @@
 .Puppet_Master_imgnote > ul {
   width: 800px;
   position: absolute;
-  right: -200px;
-  bottom: -10px;
-  font-size: 20px;
+  right: -220px;
+  bottom: 60px;
   color: white;
   font-family: "sieun";
 }
@@ -78,13 +84,6 @@
 .screenshot4,
 .screenshot5 {
   opacity: 0;
-}
-.note1 > li > h2,
-.note2 > li > h2,
-.note3 > li > h2,
-.note4 > li > h2,
-.note5 > li > h2 {
-  font-size: 40px;
 }
 
 .note2,
@@ -99,9 +98,22 @@
 .note > ul > li {
   width: 1050px;
 }
+.click_hearts {
+  position: relative;
+  left: 300%;
+  bottom: 180px;
+}
 .click_heart {
   width: 100px;
-  position: relative;
-  left: 550%;
-  bottom: 90px;
+}
+.click_hearts > p {
+  font-size: 24px;
+  padding-left: 20px;
+  font-family: sieun;
+  color: white;
+  transition: 0.4s;
+  opacity: 0;
+}
+.click_heart:hover ~ p {
+  opacity: 1;
 }
